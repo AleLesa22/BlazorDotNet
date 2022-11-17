@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fkjNMWmds8VapX26DqWv1/CaQoVi+4yjUjZz0olerSb6mvP3le8fjyJxrHM97U+/YRHbjkLFwmITHCm3vhsG1A==",
+  "dgSpecHash": "7QpJ5hWZ8AqSmFr1TUHisFAwkeiTJAKv+b/PxiKe6MIe6VEjab2l8Vi2LWgbzNDnJRGjuNZtUgi5Ed8O6AJjzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\BlazorServerApp.csproj",
+  "projectFilePath": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\BlazorServerApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\avidakovic\\.nuget\\packages\\microsoft.aspnet.webapi\\5.2.9\\microsoft.aspnet.webapi.5.2.9.nupkg.sha512",
     "C:\\Users\\avidakovic\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\BlazorServerApp.csproj": {}
+    "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\BlazorServerApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\BlazorServerApp.csproj": {
+    "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\BlazorServerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\BlazorServerApp.csproj",
+        "projectUniqueName": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\BlazorServerApp.csproj",
         "projectName": "BlazorServerApp",
-        "projectPath": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\BlazorServerApp.csproj",
+        "projectPath": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\BlazorServerApp.csproj",
         "packagesPath": "C:\\Users\\avidakovic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\obj\\",
+        "outputPath": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pjUBIw2IpYKPpff093hP48ng0JYHtqJGJgzuonlbgp0=",
+  "Hash": "LyPJyK/HUOl+wCayFsVz1MZM5GuJy6R+t0heehgqk5g=",
   "Source": "BlazorServerApp",
   "BasePath": "_content/BlazorServerApp",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "BlazorServerApp\\wwwroot",
       "Source": "BlazorServerApp",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "Pattern": "**"
     }
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "C:\\Users\\avidakovic\\.nuget\\packages\\mudblazor\\6.1.2\\staticwebassets\\MudBlazor.min.js"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorServerApp.styles.css",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorServerApp.styles.css",
       "SourceId": "BlazorServerApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "BlazorServerApp.styles.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorServerApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorServerApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorServerApp.bundle.scp.css",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorServerApp.bundle.scp.css",
       "SourceId": "BlazorServerApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "BlazorServerApp.bundle.scp.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorServerApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorServerApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\css\\site.css",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\favicon.ico",
       "SourceId": "BlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GIT BLAZOR FINAL\\BlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\avidakovic\\Desktop\\GitNewBlazor\\BlazorDotNet\\BlazorServerApp\\wwwroot\\",
       "BasePath": "_content/BlazorServerApp",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

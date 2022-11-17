@@ -7,7 +7,7 @@ namespace BlazorServerApp.Pages.AdditionalPages.TodoItem.Service
 
         public static List<CategoryDTO> categories = new List<CategoryDTO>();
         public static List<UserDTO> users = new List<UserDTO>();
-        public async Task InsertTodo(string Title, string Description, bool IsDone, string CategoryId, string UserId, HttpClient httpClient)
+        public async Task InsertTodo(string Title, string Description, bool IsDone, string CategoryId, string CategoryName, string UserId, string UserFirstName, string UserLastName, HttpClient httpClient)
         {
             TodoItemDTO newTodoItem = new TodoItemDTO();
             CategoryDTO Cat = new CategoryDTO();
@@ -25,17 +25,15 @@ namespace BlazorServerApp.Pages.AdditionalPages.TodoItem.Service
             newTodoItem.Description = Description;
             newTodoItem.IsDone = IsDone;
 
-            Cat = categories.First(x => x.Id == CategoryId);
-            Usr = users.First(x => x.Id == UserId);
+            Cat.Id = CategoryId;
+            Cat.Name = CategoryName;
+
+            Usr.Id = UserId;
+            Usr.FirstName = UserFirstName;
+            Usr.LastName = UserLastName;
 
             newTodoItem.Category = Cat;
             newTodoItem.User = Usr;
-
-            newTodoItem.Category.Id = Cat.Id;
-            newTodoItem.Category.Name = Cat.Name;
-            newTodoItem.User.Id = Usr.Id;
-            newTodoItem.User.FirstName = Usr.FirstName;
-            newTodoItem.User.LastName = Usr.LastName;
 
             var result = await newHttpCLIENT.PostAsJsonAsync("https://localhost:7127/api/TodoItem", newTodoItem);
         }
