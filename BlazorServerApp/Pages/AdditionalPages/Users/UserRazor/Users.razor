@@ -1,0 +1,51 @@
+﻿@using BlazorServerApp.Models
+@using Microsoft.AspNetCore.Mvc
+@using static System.Net.WebRequestMethods
+@page "/Users"
+@inject HttpClient Http
+@inject IDialogService DialogService
+@using MudBlazor
+@using System.Net.Http.Json
+
+<h3>Categories</h3>
+
+@if (users.Count == 0)
+{
+    <h1>No Categories Items found.</h1>
+}
+else
+{
+    <MudTable Items="@users" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>FirstName</MudTh>
+            <MudTh>LastName</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Nr">@context.Id</MudTd>
+            <MudTd DataLabel="Sign">@context.FirstName</MudTd>
+            <MudTd DataLabel="Sign">@context.LastName</MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+<MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+    Add new User
+</MudButton>
+
+@code {
+    public List<UserDTO> users = new List<UserDTO>();
+    private bool _loading;
+    private bool _hidePosition;
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await Http.GetFromJsonAsync<List<UserDTO>>("https://localhost:7127/api/Users");
+    }
+
+    private void OpenDialog()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<UsersDialog>("Add New User", options);
+    }
+}

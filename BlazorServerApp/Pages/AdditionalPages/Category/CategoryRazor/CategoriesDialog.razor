@@ -1,0 +1,36 @@
+﻿@using BlazorServerApp.Pages.AdditionalPages.Category.Store
+@using Microsoft.AspNetCore.Mvc
+@using static System.Net.WebRequestMethods
+@inject HttpClient Http
+@inject IDialogService DialogService
+@using MudBlazor
+@using System.Net.Http.Json
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField @bind-Value="@Name" Label="Standard" Variant="Variant.Text"></MudTextField>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" @onclick="SumbitCategory">Ok</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    CategoryStore categoryStore = new CategoryStore();
+    string Name;
+    public HttpClient httpClient;
+
+    protected override void OnInitialized()
+    {
+        httpClient = new HttpClient();
+    }
+
+    private async Task SumbitCategory()
+    {
+        categoryStore.InsertCategoryStore(Name,httpClient);
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+    void Cancel() => MudDialog.Cancel();
+}

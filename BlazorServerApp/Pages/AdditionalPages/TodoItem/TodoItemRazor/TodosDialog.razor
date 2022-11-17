@@ -1,0 +1,50 @@
+﻿@using BlazorServerApp.Models
+@using BlazorServerApp.Pages.AdditionalPages.TodoItem.Store
+@using Microsoft.AspNetCore.Mvc
+@using static System.Net.WebRequestMethods
+@inject HttpClient Http
+@inject IDialogService DialogService
+@using MudBlazor
+@using System.Net.Http.Json
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField @bind-Value="@Title" Label="Standard" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@Description" Label="Standard" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@IsDone" Label="Standard" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@CategoryId" Label="Standard" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@UserId" Label="Standard" Variant="Variant.Text"></MudTextField>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" @onclick="SumbitCategory">Ok</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    TodoStore todoStore = new TodoStore();
+
+
+    string Id;
+    string Title;
+    string Description;
+    bool IsDone;
+    string CategoryId;
+    string UserId;
+
+
+    public HttpClient httpClient;
+
+    protected override void OnInitialized()
+    {
+        httpClient = new HttpClient();
+    }
+
+    private async Task SumbitCategory()
+    {
+        todoStore.InsertTodoStore(Title, Description, IsDone, CategoryId, UserId, httpClient);
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+    void Cancel() => MudDialog.Cancel();
+}

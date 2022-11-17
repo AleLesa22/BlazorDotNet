@@ -1,0 +1,38 @@
+﻿@using BlazorServerApp.Pages.AdditionalPages.Users.Store
+@using Microsoft.AspNetCore.Mvc
+@using static System.Net.WebRequestMethods
+@inject HttpClient Http
+@inject IDialogService DialogService
+@using MudBlazor
+@using System.Net.Http.Json
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField @bind-Value="@FirstName" Label="Standard" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@LastName" Label="Standard" Variant="Variant.Text"></MudTextField>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" @onclick="SubmitUser">Ok</MudButton>
+    </DialogActions>
+</MudDialog>
+@code {
+
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    UserStore userStore = new UserStore();
+    string FirstName;
+    string LastName;
+    public HttpClient httpClient;
+
+    protected override void OnInitialized()
+    {
+        httpClient = new HttpClient();
+    }
+
+    private async Task SubmitUser()
+    {
+        userStore.InsertUserStore(FirstName, LastName, httpClient);
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+    void Cancel() => MudDialog.Cancel();
+}

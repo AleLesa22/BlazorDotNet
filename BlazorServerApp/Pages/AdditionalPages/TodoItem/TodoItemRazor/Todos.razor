@@ -1,0 +1,57 @@
+﻿@using BlazorServerApp.Models
+@using Microsoft.AspNetCore.Mvc
+@using static System.Net.WebRequestMethods
+@page "/Todos"
+@inject HttpClient Http
+@inject IDialogService DialogService
+@using MudBlazor
+@using System.Net.Http.Json
+
+<h3>Todos</h3>
+
+@if (todos.Count == 0)
+{
+    <h1>No Categories Items found.</h1>
+}
+else
+{
+    <MudTable Items="@todos" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>Title</MudTh>
+            <MudTh>Description</MudTh>
+            <MudTh>IsDone</MudTh>
+            <MudTh>CategoryId</MudTh>
+            <MudTh>UserId</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Nr">@context.Id</MudTd>
+            <MudTd DataLabel="Sign">@context.Title</MudTd>
+            <MudTd DataLabel="Sign">@context.Description</MudTd>
+            <MudTd DataLabel="Sign">@context.IsDone</MudTd>
+            <MudTd DataLabel="Sign">@context.Category.Id</MudTd>
+            <MudTd DataLabel="Sign">@context.User.Id</MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+<MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+    Add new Todo
+</MudButton>
+
+@code {
+    public List<TodoItemDTO> todos = new List<TodoItemDTO>();
+    private bool _loading;
+    private bool _hidePosition;
+
+    protected override async Task OnInitializedAsync()
+    {
+        todos = await Http.GetFromJsonAsync<List<TodoItemDTO>>("https://localhost:7127/api/TodoItems");
+    }
+
+    private void OpenDialog()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<TodosDialog>("Add New Todo", options);
+    }
+}

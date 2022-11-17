@@ -1,0 +1,49 @@
+﻿@using BlazorServerApp.Models
+@using Microsoft.AspNetCore.Mvc
+@using static System.Net.WebRequestMethods
+@page "/Categories"
+@inject HttpClient Http
+@inject IDialogService DialogService
+@using MudBlazor
+@using System.Net.Http.Json
+
+<h3>Categories</h3>
+
+@if (categories.Count == 0)
+{
+    <h1>No Categories Items found.</h1>
+}
+else
+{
+    <MudTable Items="@categories" Hover="true" Breakpoint="Breakpoint.Sm" Loading="@_loading" LoadingProgressColor="Color.Info">
+        <HeaderContent>
+            <MudTh>Id</MudTh>
+            <MudTh>Name</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd DataLabel="Nr">@context.Id</MudTd>
+            <MudTd DataLabel="Sign">@context.Name</MudTd>
+        </RowTemplate>
+    </MudTable>
+}
+
+<MudButton @onclick="OpenDialog" Variant="Variant.Filled" Color="Color.Primary">
+    Add new Category
+</MudButton>
+
+@code {
+    public List<CategoryDTO> categories = new List<CategoryDTO>();
+    private bool _loading;
+    private bool _hidePosition;
+
+    protected override async Task OnInitializedAsync()
+    {
+        categories = await Http.GetFromJsonAsync<List<CategoryDTO>>("https://localhost:7127/api/Categories");
+    }
+
+    private void OpenDialog()
+    {
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<CategoriesDialog>("Add New Category", options);
+    }
+}
