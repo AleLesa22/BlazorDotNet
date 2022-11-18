@@ -24,6 +24,9 @@ else
         <RowTemplate>
             <MudTd DataLabel="Nr">@context.Id</MudTd>
             <MudTd DataLabel="Sign">@context.Name</MudTd>
+            <MudTd DataLabel="Update">
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="(e)=>{UpdateCategoryDialog(context.Id);}">Update</MudButton>
+            </MudTd>
             <MudTd DataLabel="Delete">
                 <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="(e)=>{DeleteCategoryDialog(context.Id);}">Delete</MudButton>
             </MudTd>
@@ -58,6 +61,13 @@ else
         var parameters = new DialogParameters { ["CategoryId"] = CategoryId };
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<DeleteCategoryDialog>("Delete Category", parameters, options);
+    }
+
+    private void UpdateCategoryDialog(string CategoryId)
+    {
+        var parameters = new DialogParameters { ["CategoryId"] = CategoryId };
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<UpdateCategoryDialog>("Update Category", parameters, options);
     }
 
 }

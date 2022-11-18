@@ -14,5 +14,11 @@ namespace BlazorServerApp.Pages.AdditionalPages.Category.Store
             CategoryViewService categoryViewService = new CategoryViewService();
             categoryViewService.DeleteCategory(CategoryId, httpClient);
         }
+
+        public async Task UpdateCategoryStore(string CategoryId, string Name, HttpClient httpClient)
+        {
+            CategoryViewService categoryViewService = new CategoryViewService();
+            categoryViewService.UpdateCategory(CategoryId, Name, httpClient);
+        }
     }
 }

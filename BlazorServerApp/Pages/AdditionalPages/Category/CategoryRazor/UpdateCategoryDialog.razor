@@ -1,0 +1,38 @@
+﻿@using BlazorServerApp.Pages.AdditionalPages.Category.Store
+@using MudBlazor
+<h3>UpdateCategoryDialog</h3>
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField @bind-Value="ReadOnly" Label="Read Only" ReadOnly="true" Variant="Variant.Outlined" />
+        <MudTextField @bind-Value="@Name" Label="Category Name" Variant="Variant.Text"></MudTextField>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" @onclick="UpdateCategory">Delete</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public string CategoryId { get; set; }
+    public string ReadOnly { get; set; } = "Update Category";
+    string Name;
+
+    public HttpClient httpClient;
+    protected override void OnInitialized()
+    {
+        httpClient = new HttpClient();
+    }
+
+    CategoryStore categoryStore = new CategoryStore();
+
+    private async Task UpdateCategory()
+    {
+        categoryStore.UpdateCategoryStore(CategoryId,Name, httpClient);
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+
+
+    void Cancel() => MudDialog.Cancel();
+}
