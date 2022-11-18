@@ -51,6 +51,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXFVzZXJzXFVzZXJSYXpvclxEZWxldGVVc2VyRGlhbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/avidakovic/Desktop/GitNewBlazor/BlazorDotNet/BlazorServerApp/Pages/AdditionalPages/Users/UserRazor/UpdateUserDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXFVzZXJzXFVzZXJSYXpvclxVcGRhdGVVc2VyRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/avidakovic/Desktop/GitNewBlazor/BlazorDotNet/BlazorServerApp/Pages/AdditionalPages/Users/UserRazor/Users.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXFVzZXJzXFVzZXJSYXpvclxVc2Vycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

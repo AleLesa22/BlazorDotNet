@@ -21,11 +21,15 @@ else
             <MudTh>FirstName</MudTh>
             <MudTh>LastName</MudTh>
             <MudTh></MudTh>
+            <MudTh></MudTh>
         </HeaderContent>
         <RowTemplate>
             <MudTd DataLabel="Nr">@context.Id</MudTd>
             <MudTd DataLabel="Sign">@context.FirstName</MudTd>
             <MudTd DataLabel="Sign">@context.LastName</MudTd>
+            <MudTd DataLabel="Update">
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="(e)=>{UpdateUserDialog(context.Id);}">Update</MudButton>
+            </MudTd>
             <MudTd DataLabel="Delete">
                 <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="(e)=>{DeleteUserDialog(context.Id);}">Delete</MudButton>
             </MudTd>
@@ -59,5 +63,12 @@ else
         var parameters = new DialogParameters { ["UserId"] = UserId };
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<DeleteUserDialog>("Delete User", parameters, options);
+    }
+
+    private void UpdateUserDialog(string UserId)
+    {
+        var parameters = new DialogParameters { ["UserId"] = UserId };
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<UpdateUserDialog>("Update Category", parameters, options);
     }
 }

@@ -15,5 +15,11 @@ namespace BlazorServerApp.Pages.AdditionalPages.Users.Store
             UserViewService userViewService = new UserViewService();
             userViewService.DeleteUser(UserId, httpClient);
         }
+
+        public async Task UpdateUserStore(string UserId, string FirstName, string LastName, HttpClient httpClient)
+        {
+            UserViewService userViewService = new UserViewService();
+            userViewService.UpdateUser(UserId, FirstName, LastName, httpClient);
+        }
     }
 }

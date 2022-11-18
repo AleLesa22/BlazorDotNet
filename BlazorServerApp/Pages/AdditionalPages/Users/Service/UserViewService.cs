@@ -18,5 +18,15 @@ namespace BlazorServerApp.Pages.AdditionalPages.Users.Service
             Guid UserIdGuid = Guid.Parse(UserId);
             var result = await httpClient.DeleteAsync($"https://localhost:7127/api/User?Id={UserIdGuid}");
         }
+
+        public async Task UpdateUser(string UserId, string FirstName, string LastName, HttpClient httpClient)
+        {
+            UserToUpdateDTO newUser = new UserToUpdateDTO();
+            Guid UserIdGuid = Guid.Parse(UserId);
+            newUser.Id = UserIdGuid;
+            newUser.FirstName = FirstName;
+            newUser.LastName = LastName;
+            var result = await httpClient.PutAsJsonAsync("https://localhost:7127/api/User", newUser);
+        }
     }
 }

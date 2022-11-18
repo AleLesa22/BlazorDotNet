@@ -1,0 +1,40 @@
+﻿@using BlazorServerApp.Pages.AdditionalPages.Users.Store
+@using MudBlazor
+<h3>UpdateUserDialog</h3>
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField @bind-Value="ReadOnly" Label="Read Only" ReadOnly="true" Variant="Variant.Outlined" />
+        <MudTextField @bind-Value="@FirstName" Label="User First Name" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@LastName" Label="User Last Name" Variant="Variant.Text"></MudTextField>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" @onclick="UpdateUser">Update</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public string UserId { get; set; }
+    public string ReadOnly { get; set; } = "Update User";
+    string FirstName;
+    string LastName;
+
+    public HttpClient httpClient;
+    protected override void OnInitialized()
+    {
+        httpClient = new HttpClient();
+    }
+
+    UserStore userStore = new UserStore();
+
+    private async Task UpdateUser()
+    {
+        userStore.UpdateUserStore(UserId, FirstName,LastName, httpClient);
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+
+    void Cancel() => MudDialog.Cancel();
+
+}
