@@ -6,6 +6,7 @@ namespace BlazorServerApp.Pages.AdditionalPages.TodoItem.Service
     {
         public static List<CategoryDTO> categories = new List<CategoryDTO>();
         public static List<UserDTO> users = new List<UserDTO>();
+        public static List<TodoItemDTO> todoItems = new List<TodoItemDTO>();
 
         public async Task InsertTodo(string Title, string Description, bool IsDone, string CategoryId, string UserId, HttpClient httpClient)
         {
@@ -26,6 +27,12 @@ namespace BlazorServerApp.Pages.AdditionalPages.TodoItem.Service
             newTodoItem.User = usr; ;
 
             var result = await httpClient.PostAsJsonAsync("https://localhost:7127/api/TodoItem", newTodoItem);
+        }
+
+        public async Task DeleteTodo(string TodoId, HttpClient httpClient)
+        {
+            Guid TodoIdGuid = Guid.Parse(TodoId);
+            var result = await httpClient.DeleteAsync($"https://localhost:7127/api/TodoItem?Id={TodoIdGuid}");
         }
     }
 }

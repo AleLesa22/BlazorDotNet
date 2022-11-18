@@ -1,0 +1,37 @@
+﻿@using BlazorServerApp.Pages.AdditionalPages.TodoItem.Store
+@using MudBlazor
+<h3>DeleteDialog</h3>
+
+<MudDialog>
+        <DialogContent>
+        <MudTextField @bind-Value="ReadOnly" Label="Read Only" ReadOnly="true" Variant="Variant.Outlined" />
+        </DialogContent>
+        <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" @onclick="DeleteTodo">Delete</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public string TodoId { get; set; }
+
+    public HttpClient httpClient;
+    public string ReadOnly { get; set; } = "Delete Todo Item";
+    TodoStore todoStore = new TodoStore();
+    string DeleteId;
+
+    protected override void OnInitialized()
+    {
+        httpClient = new HttpClient();
+    }
+
+    private async Task DeleteTodo()
+    {
+        todoStore.DeleteTodoStore(TodoId,httpClient);
+        MudDialog.Close(DialogResult.Ok(true));
+
+    }
+
+    void Cancel() => MudDialog.Cancel();
+}

@@ -23,6 +23,7 @@ else
             <MudTh>IsDone</MudTh>
             <MudTh>CategoryId</MudTh>
             <MudTh>UserId</MudTh>
+            <MudTh></MudTh>
         </HeaderContent>
         <RowTemplate>
             <MudTd DataLabel="Nr">@context.Id</MudTd>
@@ -31,6 +32,9 @@ else
             <MudTd DataLabel="Sign">@context.IsDone</MudTd>
             <MudTd DataLabel="Sign">@context.Category.Id</MudTd>
             <MudTd DataLabel="Sign">@context.User.Id</MudTd>
+            <MudTd DataLabel="Delete">
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="(e)=>{DeleteDialog(context.Id);}">Delete</MudButton>
+            </MudTd>
         </RowTemplate>
     </MudTable>
 }
@@ -53,5 +57,12 @@ else
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<TodosDialog>("Add New Todo", options);
+    }
+
+    private void DeleteDialog(string TodoId)
+    {
+        var parameters = new DialogParameters { ["TodoId"] = TodoId };
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<DeleteDialog>("Delete Todo", parameters,options);
     }
 }
