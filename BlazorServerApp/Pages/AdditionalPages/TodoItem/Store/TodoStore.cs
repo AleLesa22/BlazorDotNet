@@ -16,5 +16,11 @@ namespace BlazorServerApp.Pages.AdditionalPages.TodoItem.Store
             TodoViewService todoViewService = new TodoViewService();
             todoViewService.DeleteTodo(TodoId, httpClient);
         }
+
+        public async Task UpdateTodoStore(string TodoId, string Title, string Description, bool IsDone, string CategoryId, string UserId, HttpClient httpClient)
+        {
+            TodoViewService todoViewService = new TodoViewService();
+            todoViewService.UpdateTodo(TodoId, Title, Description, IsDone, CategoryId, UserId, httpClient);
+        }
     }
 }

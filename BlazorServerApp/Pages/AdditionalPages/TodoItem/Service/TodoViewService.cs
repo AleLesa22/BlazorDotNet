@@ -24,7 +24,7 @@ namespace BlazorServerApp.Pages.AdditionalPages.TodoItem.Service
             newTodoItem.Description = Description;
             newTodoItem.IsDone = IsDone;
             newTodoItem.Category = cat;
-            newTodoItem.User = usr; ;
+            newTodoItem.User = usr;
 
             var result = await httpClient.PostAsJsonAsync("https://localhost:7127/api/TodoItem", newTodoItem);
         }
@@ -33,6 +33,27 @@ namespace BlazorServerApp.Pages.AdditionalPages.TodoItem.Service
         {
             Guid TodoIdGuid = Guid.Parse(TodoId);
             var result = await httpClient.DeleteAsync($"https://localhost:7127/api/TodoItem?Id={TodoIdGuid}");
+        }
+
+        public async Task UpdateTodo(string TodoId, string Title, string Description, bool IsDone, string CategoryId, string UserId, HttpClient httpClient)
+        {
+            categories = await httpClient.GetFromJsonAsync<List<CategoryDTO>>("https://localhost:7127/api/Categories");
+            users = await httpClient.GetFromJsonAsync<List<UserDTO>>("https://localhost:7127/api/Users");
+
+            TodoItemToUpdateDTO TodoItemToUpdate = new TodoItemToUpdateDTO();
+            CategoryDTO cat = new CategoryDTO();
+            cat = categories.First(x => x.Id == CategoryId);
+            UserDTO usr = new UserDTO();
+            usr = users.First(x => x.Id == UserId);
+
+            TodoItemToUpdate.Id = Guid.Parse(TodoId);
+            TodoItemToUpdate.Title = Title;
+            TodoItemToUpdate.Description = Description;
+            TodoItemToUpdate.IsDone = IsDone;
+            TodoItemToUpdate.Category = cat;
+            TodoItemToUpdate.User = usr;
+
+            var result = await httpClient.PutAsJsonAsync("https://localhost:7127/api/TodoItem", TodoItemToUpdate);
         }
     }
 }

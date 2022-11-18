@@ -1,0 +1,76 @@
+﻿@using BlazorServerApp.Models
+@using BlazorServerApp.Pages.AdditionalPages.TodoItem.Store
+@using MudBlazor
+<h3>UpdateTodoItemDialog</h3>
+
+<MudDialog>
+    <DialogContent>
+        <MudTextField @bind-Value="ReadOnly" Label="Read Only" ReadOnly="true" Variant="Variant.Outlined" />
+        <MudTextField @bind-Value="@Title" Label="Todo Name" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@Description" Label="Todo Desc" Variant="Variant.Text"></MudTextField>
+        <MudTextField @bind-Value="@IsDone" Label="Standard" Variant="Variant.Text"></MudTextField>
+        <MudSelect Label="Category " HelperText="Pick Category" MultiSelection="false" @bind-Value="@UserId">
+            @foreach (var item in users)
+            {
+                <MudSelectItem Value="@item.Id.ToString()"> @item.FirstName </MudSelectItem>
+            }
+        </MudSelect>
+
+        <MudSelect Label="Category " HelperText="Pick Category" MultiSelection="false" @bind-Value="@CategoryId">
+            @foreach (var item in categories)
+            {
+                <MudSelectItem Value="@item.Id.ToString()"> @item.Name </MudSelectItem>
+            }
+        </MudSelect>
+
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" @onclick="UpdateTodoItem">Delete</MudButton>
+    </DialogActions>
+</MudDialog>
+
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    TodoStore todoStore = new TodoStore();
+    public string ReadOnly { get; set; } = "Update Todo";
+    [Parameter] public string TodoId { get; set; }
+
+
+    public static List<CategoryDTO> categories = new List<CategoryDTO>();
+    public static List<UserDTO> users = new List<UserDTO>();
+
+    string Id;
+    string Title;
+    string Description;
+    bool IsDone;
+    string CategoryId;
+    string UserId;
+
+
+
+    public HttpClient httpClient;
+    protected override void OnInitialized()
+    {
+        httpClient = new HttpClient();
+        LoadValues();
+    }
+
+    public async Task LoadValues()
+    {
+        categories = await httpClient.GetFromJsonAsync<List<CategoryDTO>>("https://localhost:7127/api/Categories");
+        users = await httpClient.GetFromJsonAsync<List<UserDTO>>("https://localhost:7127/api/Users");
+    }
+
+
+    private async Task UpdateTodoItem()
+    {
+        todoStore.UpdateTodoStore(TodoId, Title, Description,IsDone, CategoryId, UserId, httpClient);
+        MudDialog.Close(DialogResult.Ok(true));
+    }
+
+
+    void Cancel() => MudDialog.Cancel();
+
+}
