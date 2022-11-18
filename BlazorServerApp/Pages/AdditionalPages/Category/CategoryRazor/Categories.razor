@@ -19,10 +19,14 @@ else
         <HeaderContent>
             <MudTh>Id</MudTh>
             <MudTh>Name</MudTh>
+            <MudTh></MudTh>
         </HeaderContent>
         <RowTemplate>
             <MudTd DataLabel="Nr">@context.Id</MudTd>
             <MudTd DataLabel="Sign">@context.Name</MudTd>
+            <MudTd DataLabel="Delete">
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="(e)=>{DeleteCategoryDialog(context.Id);}">Delete</MudButton>
+            </MudTd>
         </RowTemplate>
     </MudTable>
 }
@@ -35,6 +39,8 @@ else
     public List<CategoryDTO> categories = new List<CategoryDTO>();
     private bool _loading;
     private bool _hidePosition;
+    public string CategoryId;
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -46,4 +52,12 @@ else
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<CategoriesDialog>("Add New Category", options);
     }
+
+    private void DeleteCategoryDialog(string CategoryId)
+    {
+        var parameters = new DialogParameters { ["CategoryId"] = CategoryId };
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<DeleteCategoryDialog>("Delete Category", parameters, options);
+    }
+
 }

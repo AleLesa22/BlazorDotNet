@@ -1,12 +1,13 @@
 ﻿@using BlazorServerApp.Pages.AdditionalPages.TodoItem.Store
+@using BlazorServerApp.Pages.AdditionalPages.Users.Store
 @using MudBlazor
 <h3>DeleteDialog</h3>
 
 <MudDialog>
-        <DialogContent>
+    <DialogContent>
         <MudTextField @bind-Value="ReadOnly" Label="Read Only" ReadOnly="true" Variant="Variant.Outlined" />
-        </DialogContent>
-        <DialogActions>
+    </DialogContent>
+    <DialogActions>
         <MudButton OnClick="Cancel">Cancel</MudButton>
         <MudButton Color="Color.Primary" @onclick="DeleteTodo">Delete</MudButton>
     </DialogActions>
@@ -14,11 +15,11 @@
 
 @code {
     [CascadingParameter] MudDialogInstance MudDialog { get; set; }
-    [Parameter] public string TodoId { get; set; }
+    [Parameter] public string UserId { get; set; }
+    public string ReadOnly { get; set; } = "Delete User";
 
     public HttpClient httpClient;
-    public string ReadOnly { get; set; } = "Delete Todo Item";
-    TodoStore todoStore = new TodoStore();
+    UserStore userStore = new UserStore();
 
     protected override void OnInitialized()
     {
@@ -27,7 +28,7 @@
 
     private async Task DeleteTodo()
     {
-        todoStore.DeleteTodoStore(TodoId,httpClient);
+        userStore.DeleteUserStore(UserId, httpClient);
         MudDialog.Close(DialogResult.Ok(true));
 
     }

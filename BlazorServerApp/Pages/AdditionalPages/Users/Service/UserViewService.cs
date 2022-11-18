@@ -12,5 +12,11 @@ namespace BlazorServerApp.Pages.AdditionalPages.Users.Service
             newUser.LastName = LastName;
             httpClient.PostAsJsonAsync("https://localhost:7127/api/User", newUser);
         }
+
+        public async Task DeleteUser(string UserId, HttpClient httpClient)
+        {
+            Guid UserIdGuid = Guid.Parse(UserId);
+            var result = await httpClient.DeleteAsync($"https://localhost:7127/api/User?Id={UserIdGuid}");
+        }
     }
 }

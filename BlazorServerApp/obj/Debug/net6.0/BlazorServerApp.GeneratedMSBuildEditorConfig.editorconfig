@@ -27,6 +27,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXENhdGVnb3J5XENhdGVnb3J5UmF6b3JcQ2F0ZWdvcmllc0RpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/avidakovic/Desktop/GitNewBlazor/BlazorDotNet/BlazorServerApp/Pages/AdditionalPages/Category/CategoryRazor/DeleteCategoryDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXENhdGVnb3J5XENhdGVnb3J5UmF6b3JcRGVsZXRlQ2F0ZWdvcnlEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/avidakovic/Desktop/GitNewBlazor/BlazorDotNet/BlazorServerApp/Pages/AdditionalPages/TodoItem/TodoItemRazor/DeleteDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXFRvZG9JdGVtXFRvZG9JdGVtUmF6b3JcRGVsZXRlRGlhbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -37,6 +41,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/avidakovic/Desktop/GitNewBlazor/BlazorDotNet/BlazorServerApp/Pages/AdditionalPages/TodoItem/TodoItemRazor/TodosDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXFRvZG9JdGVtXFRvZG9JdGVtUmF6b3JcVG9kb3NEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/avidakovic/Desktop/GitNewBlazor/BlazorDotNet/BlazorServerApp/Pages/AdditionalPages/Users/UserRazor/DeleteUserDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaXRpb25hbFBhZ2VzXFVzZXJzXFVzZXJSYXpvclxEZWxldGVVc2VyRGlhbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/avidakovic/Desktop/GitNewBlazor/BlazorDotNet/BlazorServerApp/Pages/AdditionalPages/Users/UserRazor/Users.razor]

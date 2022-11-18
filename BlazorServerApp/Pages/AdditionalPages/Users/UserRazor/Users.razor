@@ -20,11 +20,15 @@ else
             <MudTh>Id</MudTh>
             <MudTh>FirstName</MudTh>
             <MudTh>LastName</MudTh>
+            <MudTh></MudTh>
         </HeaderContent>
         <RowTemplate>
             <MudTd DataLabel="Nr">@context.Id</MudTd>
             <MudTd DataLabel="Sign">@context.FirstName</MudTd>
             <MudTd DataLabel="Sign">@context.LastName</MudTd>
+            <MudTd DataLabel="Delete">
+                <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="(e)=>{DeleteUserDialog(context.Id);}">Delete</MudButton>
+            </MudTd>
         </RowTemplate>
     </MudTable>
 }
@@ -37,6 +41,7 @@ else
     public List<UserDTO> users = new List<UserDTO>();
     private bool _loading;
     private bool _hidePosition;
+    public string UserId;
 
     protected override async Task OnInitializedAsync()
     {
@@ -47,5 +52,12 @@ else
     {
         var options = new DialogOptions { CloseOnEscapeKey = true };
         DialogService.Show<UsersDialog>("Add New User", options);
+    }
+
+    private void DeleteUserDialog(string UserId)
+    {
+        var parameters = new DialogParameters { ["UserId"] = UserId };
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        DialogService.Show<DeleteUserDialog>("Delete User", parameters, options);
     }
 }
