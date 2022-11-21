@@ -10,13 +10,13 @@ namespace BlazorServerApp.Pages.AdditionalPages.Category.Service
             CategoryDTO newCategory = new CategoryDTO();
             newCategory.Id = Guid.NewGuid().ToString();
             newCategory.Name = Name;
-            httpClient.PostAsJsonAsync("https://localhost:7127/api/Category", newCategory);
+            httpClient.PostAsJsonAsync("http://localhost:1234/api/Category", newCategory);
         }
 
         public async Task DeleteCategory(string CategoryId, HttpClient httpClient)
         {
             Guid CategoryIdGuid = Guid.Parse(CategoryId);
-            var result = await httpClient.DeleteAsync($"https://localhost:7127/api/Category?Id={CategoryIdGuid}");
+            var result = await httpClient.DeleteAsync($"http://localhost:1234/api/Category?Id={CategoryIdGuid}");
         }
 
         public async Task UpdateCategory(string CategoryId, string Name, HttpClient httpClient)
@@ -25,7 +25,7 @@ namespace BlazorServerApp.Pages.AdditionalPages.Category.Service
             Guid CategoryIdGuid = Guid.Parse(CategoryId);
             newCategory.Id = CategoryIdGuid;
             newCategory.Name = Name;
-            var result = await httpClient.PutAsJsonAsync("https://localhost:7127/api/Category", newCategory);
+            var result = await httpClient.PutAsJsonAsync("http://localhost:1234/api/Category", newCategory);
         }
     }
 }

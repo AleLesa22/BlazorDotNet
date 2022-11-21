@@ -10,13 +10,13 @@ namespace BlazorServerApp.Pages.AdditionalPages.Users.Service
             newUser.Id = Guid.NewGuid().ToString();
             newUser.FirstName = FirstName;
             newUser.LastName = LastName;
-            httpClient.PostAsJsonAsync("https://localhost:7127/api/User", newUser);
+            httpClient.PostAsJsonAsync("http://localhost:1234/api/User", newUser);
         }
 
         public async Task DeleteUser(string UserId, HttpClient httpClient)
         {
             Guid UserIdGuid = Guid.Parse(UserId);
-            var result = await httpClient.DeleteAsync($"https://localhost:7127/api/User?Id={UserIdGuid}");
+            var result = await httpClient.DeleteAsync($"http://localhost:1234/api/User?Id={UserIdGuid}");
         }
 
         public async Task UpdateUser(string UserId, string FirstName, string LastName, HttpClient httpClient)
@@ -26,7 +26,7 @@ namespace BlazorServerApp.Pages.AdditionalPages.Users.Service
             newUser.Id = UserIdGuid;
             newUser.FirstName = FirstName;
             newUser.LastName = LastName;
-            var result = await httpClient.PutAsJsonAsync("https://localhost:7127/api/User", newUser);
+            var result = await httpClient.PutAsJsonAsync("http://localhost:1234/api/User", newUser);
         }
     }
 }

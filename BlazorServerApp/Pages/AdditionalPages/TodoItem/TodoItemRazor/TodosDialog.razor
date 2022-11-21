@@ -60,8 +60,8 @@
 
     public async Task LoadValues()
     {
-        categories = await httpClient.GetFromJsonAsync<List<CategoryDTO>>("https://localhost:7127/api/Categories");
-        users = await httpClient.GetFromJsonAsync<List<UserDTO>>("https://localhost:7127/api/Users");
+        categories = await httpClient.GetFromJsonAsync<List<CategoryDTO>>("http://localhost:1234/api/Categories");
+        users = await httpClient.GetFromJsonAsync<List<UserDTO>>("http://localhost:1234/api/Users");
     }
 
     private async Task SumbitCategory()

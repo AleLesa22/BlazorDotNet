@@ -54,7 +54,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        todos = await Http.GetFromJsonAsync<List<TodoItemDTO>>("https://localhost:7127/api/TodoItems");
+        todos = await Http.GetFromJsonAsync<List<TodoItemDTO>>("http://localhost:1234/api/TodoItems");
     }
 
     private void OpenDialog()
